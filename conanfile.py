@@ -170,6 +170,6 @@ class LabVIEWConanExtension(ConanFile):
         just have to bundle your project’s bin folder.
         """
         if self.in_local_cache:
-            self.copy("*", src="lib", dst=self.source_folder + str(self.options.install_folder))
+            self.copy("*", src="lib", dst=self.source_folder +"/" + str(self.options.install_folder))
         else:
             self.copy("*", src="lib", dst=str(self.options.install_folder))
